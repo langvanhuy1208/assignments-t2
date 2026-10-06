@@ -4,6 +4,7 @@
    <xacro:arg name="name" default="ur"/>
    <!-- import main macro -->
    <xacro:include filename="$(find ur_description)/urdf/ur_macro.xacro"/>
+   <xacro:include filename="$(find ur3_llm_control)/urdf/gripper/simple_gripper.xacro"/>
 
    <!-- possible 'ur_type' values: ur3, ur5, ur10, ur3e, ur5e, ur7e, ur10e, ur12e, ur16e, ur8long, ur15, ur18, ur20, ur30 -->
    <!-- the default value should raise an error in case this was called without defining the type -->
@@ -124,9 +125,112 @@
      trajectory_port="$(arg trajectory_port)"
      ur_type="$(arg ur_type)"
      verify_robot_model="$(arg verify_robot_model)"
+     generate_ros2_control_tag="false"
      >
      <origin xyz="0 -0.2 0.55" rpy="0 0 0" />          <!-- position robot in the world -->
    </xacro:ur_robot>
+
+   <!-- =========================
+        ROS2 CONTROL: UR3 + GRIPPER
+        ========================= -->
+
+   <ros2_control name="ur" type="system">
+     <hardware>
+       <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+     </hardware>
+
+     <joint name="shoulder_pan_joint">
+       <command_interface name="position"/>
+       <command_interface name="velocity"/>
+       <command_interface name="effort"/>
+       <state_interface name="position">
+         <param name="initial_value">0.0</param>
+       </state_interface>
+       <state_interface name="velocity"/>
+       <state_interface name="effort"/>
+     </joint>
+
+     <joint name="shoulder_lift_joint">
+       <command_interface name="position"/>
+       <command_interface name="velocity"/>
+       <command_interface name="effort"/>
+       <state_interface name="position">
+         <param name="initial_value">-1.0</param>
+       </state_interface>
+       <state_interface name="velocity"/>
+       <state_interface name="effort"/>
+     </joint>
+
+     <joint name="elbow_joint">
+       <command_interface name="position"/>
+       <command_interface name="velocity"/>
+       <command_interface name="effort"/>
+       <state_interface name="position">
+         <param name="initial_value">1.2</param>
+       </state_interface>
+       <state_interface name="velocity"/>
+       <state_interface name="effort"/>
+     </joint>
+
+     <joint name="wrist_1_joint">
+       <command_interface name="position"/>
+       <command_interface name="velocity"/>
+       <command_interface name="effort"/>
+       <state_interface name="position">
+         <param name="initial_value">-1.77</param>
+       </state_interface>
+       <state_interface name="velocity"/>
+       <state_interface name="effort"/>
+     </joint>
+
+     <joint name="wrist_2_joint">
+       <command_interface name="position"/>
+       <command_interface name="velocity"/>
+       <command_interface name="effort"/>
+       <state_interface name="position">
+         <param name="initial_value">0.0</param>
+       </state_interface>
+       <state_interface name="velocity"/>
+       <state_interface name="effort"/>
+     </joint>
+
+     <joint name="wrist_3_joint">
+       <command_interface name="position"/>
+       <command_interface name="velocity"/>
+       <command_interface name="effort"/>
+       <state_interface name="position">
+         <param name="initial_value">0.0</param>
+       </state_interface>
+       <state_interface name="velocity"/>
+       <state_interface name="effort"/>
+     </joint>
+
+     <joint name="left_finger_joint">
+       <command_interface name="position"/>
+       <state_interface name="position">
+         <param name="initial_value">0.045</param>
+       </state_interface>
+       <state_interface name="velocity"/>
+     </joint>
+
+     <joint name="right_finger_joint">
+       <command_interface name="position"/>
+       <state_interface name="position">
+         <param name="initial_value">0.045</param>
+       </state_interface>
+       <state_interface name="velocity"/>
+     </joint>
+   </ros2_control>
+
+   <!-- =========================
+        SIMPLE 2-FINGER GRIPPER
+        ========================= -->
+
+   <joint name="tool0_gripper_base_joint" type="fixed">
+     <parent link="tool0"/>
+     <child link="gripper_base_link"/>
+     <origin xyz="0 0 0.04" rpy="0 0 0"/>
+   </joint>
 
    <xacro:if value="$(arg sim_gazebo)">
     <!-- Gazebo plugins -->

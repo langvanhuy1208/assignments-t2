@@ -13,7 +13,10 @@ from tf2_ros import Buffer, TransformListener, TransformException
 
 from moveit_msgs.action import MoveGroup, ExecuteTrajectory
 from moveit_msgs.srv import GetCartesianPath
+from sensor_msgs.msg import JointState
+from trajectory_msgs.msg import JointTrajectoryPoint
 from moveit_msgs.msg import (
+    RobotTrajectory,
     Constraints,
     PositionConstraint,
     OrientationConstraint,
@@ -50,6 +53,8 @@ class RobotSkills(Node):
         "red_cube": [-0.10, 0.35, 0.05],
         "yellow_cube": [0.00, 0.35, 0.05],
         "blue_cube": [0.10, 0.35, 0.05],
+        "green_cube": [0.20, 0.35, 0.05],
+        "purple_cube": [0.30, 0.35, 0.05],
     }
 
     ZONE_POSITIONS = {
@@ -81,14 +86,21 @@ class RobotSkills(Node):
 
     POSITION_TOLERANCE = 0.01
     ORIENT_TOLERANCE = 0.08       # ~4.6 do: gioi han do nghieng cua tool
+    YAW_TOLERANCE = 0.3           # rad: gioi han xoay quanh truc tool (tranh cuon co tay)
+
+    # Huong tool0 tai HOME (tool huong xuong). Dung lam huong chuan cho moi
+    # chuyen dong -> co tay khong phai xoay them. (x, y, z, w)
+    DOWN_QUAT = (-0.70711, 0.70711, 0.0, 0.0)
+
+    JOINT_SPEED = 0.5             # rad/s cho chuyen dong khop tuyen tinh (HOME)
 
     GOAL_ACCEPT_TIMEOUT = 15.0    # giay cho MoveIt nhan goal
     RESULT_TIMEOUT = 90.0         # giay cho mot chuyen dong hoan tat
-    CART_SLOWDOWN = 5.0           # lam cham duong thang dung (x lan)
+    CART_SLOWDOWN = 4.0           # lam cham duong thang (x lan)
 
     RETRY_CODES = (-1, -2, -3, -4, -6, 99999)
     MAX_ATTEMPTS = 3
-    SETTLE_SEC = 0.7
+    SETTLE_SEC = 0.4
 
     JOINT_NAMES = [
         "shoulder_pan_joint",
@@ -121,6 +133,11 @@ class RobotSkills(Node):
             GetCartesianPath, "/compute_cartesian_path"
         )
 
+        self._joint_pos = {}
+        self.create_subscription(
+            JointState, "/joint_states", self._on_joint_state, 10
+        )
+
         self.tf_buffer = Buffer()
         self.tf_listener = TransformListener(
             self.tf_buffer, self, spin_thread=True
@@ -133,6 +150,10 @@ class RobotSkills(Node):
             target=self._follow_loop, daemon=True
         )
         self._follow_thread.start()
+
+    def _on_joint_state(self, msg):
+        for name, pos in zip(msg.name, msg.position):
+            self._joint_pos[name] = pos
 
     def destroy_node(self):
         self._stop.set()
@@ -293,15 +314,6 @@ class RobotSkills(Node):
     # khong de planner chon duong di vong.
     # ----------------------------------------------------------
 
-    def _tool0_in_base(self):
-        try:
-            tf = self.tf_buffer.lookup_transform(
-                "base_link", "tool0", rclpy.time.Time()
-            )
-        except TransformException:
-            return None
-        return tf.transform
-
     def _slow_down(self, trajectory, factor):
         for point in trajectory.joint_trajectory.points:
             total = (
@@ -315,17 +327,37 @@ class RobotSkills(Node):
             point.velocities = [v / factor for v in point.velocities]
             point.accelerations = [a / (factor * factor) for a in point.accelerations]
 
-    def _move_cartesian(self, x, y, z):
-        tf = self._tool0_in_base()
-        if tf is None:
-            self.get_logger().warn("Chua co TF tool0 -> dung planner thuong")
+    def _execute_trajectory(self, trajectory):
+        if not self.execute_client.wait_for_server(timeout_sec=3.0):
+            self.get_logger().warn("/execute_trajectory khong co")
             return False
 
+        goal = ExecuteTrajectory.Goal()
+        goal.trajectory = trajectory
+        send = self.execute_client.send_goal_async(goal)
+        if not self._wait(send, self.GOAL_ACCEPT_TIMEOUT):
+            self.get_logger().error("execute_trajectory khong phan hoi")
+            return False
+
+        handle = send.result()
+        if handle is None or not handle.accepted:
+            self.get_logger().error("execute_trajectory bi tu choi")
+            return False
+
+        result = handle.get_result_async()
+        if not self._wait(result, self.RESULT_TIMEOUT):
+            handle.cancel_goal_async()
+            self.get_logger().error("execute_trajectory qua thoi gian cho, da huy")
+            return False
+
+        code = result.result().result.error_code.val
+        self.get_logger().info(f"Trajectory error_code = {code}")
+        return code == 1
+
+    def _move_cartesian(self, x, y, z):
+        """Duong thang trong khong gian, giu huong tool co dinh (khong xoay co tay)."""
         if not self.cartesian_client.wait_for_service(timeout_sec=3.0):
             self.get_logger().warn("/compute_cartesian_path khong co -> dung planner thuong")
-            return False
-        if not self.execute_client.wait_for_server(timeout_sec=3.0):
-            self.get_logger().warn("/execute_trajectory khong co -> dung planner thuong")
             return False
 
         time.sleep(self.SETTLE_SEC)
@@ -334,7 +366,8 @@ class RobotSkills(Node):
         target.position.x = x
         target.position.y = y
         target.position.z = z
-        target.orientation = tf.rotation     # giu nguyen huong tool
+        (target.orientation.x, target.orientation.y,
+         target.orientation.z, target.orientation.w) = self.DOWN_QUAT
 
         req = GetCartesianPath.Request()
         req.header.frame_id = "base_link"
@@ -354,42 +387,68 @@ class RobotSkills(Node):
         res = future.result()
         if res.fraction < 0.99:
             self.get_logger().warn(
-                f"Duong thang dung chi dat {res.fraction:.0%} -> dung planner thuong"
+                f"Duong thang chi dat {res.fraction:.0%} -> dung planner thuong"
             )
             return False
 
         self._slow_down(res.solution, self.CART_SLOWDOWN)
+        return self._execute_trajectory(res.solution)
 
-        goal = ExecuteTrajectory.Goal()
-        goal.trajectory = res.solution
-        send = self.execute_client.send_goal_async(goal)
-        if not self._wait(send, self.GOAL_ACCEPT_TIMEOUT):
-            self.get_logger().error("execute_trajectory khong phan hoi")
-            return False
-
-        handle = send.result()
-        if handle is None or not handle.accepted:
-            self.get_logger().error("execute_trajectory bi tu choi")
-            return False
-
-        result = handle.get_result_async()
-        if not self._wait(result, self.RESULT_TIMEOUT):
-            handle.cancel_goal_async()
-            self.get_logger().error("execute_trajectory qua thoi gian cho, da huy")
-            return False
-
-        code = result.result().result.error_code.val
-        self.get_logger().info(f"Cartesian move error_code = {code}")
-        return code == 1
-
-    def _move_vertical(self, x, y, z):
-        """Di chuyen thang dung; neu khong duoc thi du phong bang planner thuong."""
+    def _move_linear(self, x, y, z):
+        """Di chuyen tool0 theo duong thang; neu khong duoc thi dung planner."""
         self.get_logger().info(
-            f"Vertical move to x={x:.3f}, y={y:.3f}, z={z:.3f}"
+            f"Linear move to x={x:.3f}, y={y:.3f}, z={z:.3f}"
         )
         if self._move_cartesian(x, y, z):
             return True
         return self._move_to_position(x, y, z)
+
+    # ----------------------------------------------------------
+    # Chuyen dong khop tuyen tinh (dung cho HOME): noi suy thang giua
+    # khop hien tai va khop dich, khong de planner chon duong di vong.
+    # ----------------------------------------------------------
+
+    def _current_joints(self):
+        self._joint_pos = {}                  # bat buoc doc ban tin moi
+        deadline = time.time() + 3.0
+        while time.time() < deadline:
+            rclpy.spin_once(self, timeout_sec=0.1)
+            if all(n in self._joint_pos for n in self.JOINT_NAMES):
+                return [self._joint_pos[n] for n in self.JOINT_NAMES]
+        return None
+
+    def _move_joint_linear(self, target):
+        q0 = self._current_joints()
+        if q0 is None:
+            self.get_logger().warn("Khong doc duoc /joint_states -> dung planner thuong")
+            return False
+
+        delta = max(abs(a - b) for a, b in zip(q0, target))
+        if delta < 0.01:
+            return True
+
+        duration = max(2.0, delta / self.JOINT_SPEED)
+        n = max(10, int(duration * 10))
+
+        traj = RobotTrajectory()
+        traj.joint_trajectory.joint_names = list(self.JOINT_NAMES)
+        for i in range(n + 1):
+            t = i / n
+            s_ = 10 * t**3 - 15 * t**4 + 6 * t**5          # quintic: dung em o hai dau
+            ds = (30 * t**2 - 60 * t**3 + 30 * t**4) / duration
+
+            pt = JointTrajectoryPoint()
+            pt.positions = [a + (b - a) * s_ for a, b in zip(q0, target)]
+            pt.velocities = [(b - a) * ds for a, b in zip(q0, target)]
+            sec = t * duration
+            pt.time_from_start = Duration(
+                sec=int(sec), nanosec=int((sec - int(sec)) * 1e9)
+            )
+            traj.joint_trajectory.points.append(pt)
+
+        self.get_logger().info(f"Joint linear move, {duration:.1f}s")
+        time.sleep(self.SETTLE_SEC)
+        return self._execute_trajectory(traj)
 
     def _move_to_position(self, x, y, z):
         self.get_logger().info(
@@ -414,15 +473,15 @@ class RobotSkills(Node):
         pc.constraint_region.primitives.append(box)
         pc.constraint_region.primitive_poses.append(target)
 
-        # tool0 z huong xuong (quaternion x=1, w=0), tu do xoay quanh truc tool
+        # tool0 huong xuong, giu huong nhu tai HOME (khong cuon co tay)
         oc = OrientationConstraint()
         oc.header.frame_id = "base_link"
         oc.link_name = "tool0"
-        oc.orientation.x = 1.0
-        oc.orientation.w = 0.0
+        (oc.orientation.x, oc.orientation.y,
+         oc.orientation.z, oc.orientation.w) = self.DOWN_QUAT
         oc.absolute_x_axis_tolerance = self.ORIENT_TOLERANCE
         oc.absolute_y_axis_tolerance = self.ORIENT_TOLERANCE
-        oc.absolute_z_axis_tolerance = 3.14159
+        oc.absolute_z_axis_tolerance = self.YAW_TOLERANCE
         oc.weight = 1.0
 
         constraints = Constraints()
@@ -432,7 +491,7 @@ class RobotSkills(Node):
 
     def _lift(self, x, y):
         self.get_logger().info("LIFT: moving tool0 to safe height")
-        return self._move_vertical(x, y, self.SAFE_Z)
+        return self._move_linear(x, y, self.SAFE_Z)
 
     def _move_to_joint_values(self, joint_values):
         constraints = Constraints()
@@ -453,7 +512,7 @@ class RobotSkills(Node):
     def home(self):
         self.get_logger().info("HOME: moving robot to home position")
 
-        if self._move_to_joint_values(self.HOME):
+        if self._move_joint_linear(self.HOME) or self._move_to_joint_values(self.HOME):
             self.get_logger().info("HOME -> SUCCESS")
             return self.SUCCESS
 
@@ -478,12 +537,12 @@ class RobotSkills(Node):
         self.get_logger().info(f"PICK {object_name}")
 
         self.get_logger().info("PICK STEP: SAFE")
-        if not self._move_to_position(x, y, self.SAFE_Z):
+        if not self._move_linear(x, y, self.SAFE_Z):
             return self.PLANNING_FAILED
 
         for label, z in (("APPROACH", self.APPROACH_Z), ("GRIP", self.GRIP_Z)):
             self.get_logger().info(f"PICK STEP: {label}")
-            if not self._move_vertical(x, y, z):
+            if not self._move_linear(x, y, z):
                 return self.PLANNING_FAILED
 
         # ATTACH: tu day cube bam theo tool0 (xem _follow_loop)
@@ -526,12 +585,12 @@ class RobotSkills(Node):
         self.get_logger().info(f"PLACE {object_name} -> {zone_name}")
 
         self.get_logger().info("PLACE STEP: SAFE")
-        if not self._move_to_position(x, y, self.SAFE_Z):
+        if not self._move_linear(x, y, self.SAFE_Z):
             return self.PLANNING_FAILED
 
         for label, z in (("APPROACH", self.APPROACH_Z), ("PLACE", self.PLACE_Z)):
             self.get_logger().info(f"PLACE STEP: {label}")
-            if not self._move_vertical(x, y, z):
+            if not self._move_linear(x, y, z):
                 return self.PLANNING_FAILED
 
         # DETACH: ngung bam theo, dat cube chinh giua zone tren mat ban

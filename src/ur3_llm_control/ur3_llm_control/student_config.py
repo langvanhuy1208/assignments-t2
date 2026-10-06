@@ -15,7 +15,7 @@ OBJECT_TO_ZONE = {
     "red_cube": "zone_c",
 }
 
-ALLOWED_OBJECTS = ["red_cube", "yellow_cube", "blue_cube"]
+ALLOWED_OBJECTS = ["red_cube", "yellow_cube", "blue_cube", "green_cube", "purple_cube"]
 ALLOWED_ZONES = ["zone_a", "zone_b", "zone_c"]
 ALLOWED_SKILLS = ["home", "pick", "place"]
 
@@ -29,6 +29,20 @@ OBJECT_ALIASES = {
     "red": "red_cube",
     "red cube": "red_cube",
     "red_cube": "red_cube",
+    "green": "green_cube",
+    "green cube": "green_cube",
+    "green_cube": "green_cube",
+    "purple": "purple_cube",
+    "purple cube": "purple_cube",
+    "purple_cube": "purple_cube",
+    # tieng Viet
+    "do": "red_cube",
+    "vang": "yellow_cube",
+    "xanh duong": "blue_cube",
+    "xanh": "blue_cube",
+    "xanh la": "green_cube",
+    "luc": "green_cube",
+    "tim": "purple_cube",
 }
 
 ZONE_ALIASES = {

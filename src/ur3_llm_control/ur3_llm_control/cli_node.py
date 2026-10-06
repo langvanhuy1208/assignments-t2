@@ -21,7 +21,10 @@ COLORS = {
     "red": "red_cube", "r": "red_cube", "do": "red_cube",
     "yellow": "yellow_cube", "y": "yellow_cube", "vang": "yellow_cube",
     "blue": "blue_cube", "b": "blue_cube", "xanh": "blue_cube",
+    "green": "green_cube", "g": "green_cube", "luc": "green_cube",
+    "purple": "purple_cube", "p": "purple_cube", "tim": "purple_cube",
     "red_cube": "red_cube", "yellow_cube": "yellow_cube", "blue_cube": "blue_cube",
+    "green_cube": "green_cube", "purple_cube": "purple_cube",
 }
 ZONES = {
     "a": "zone_a", "b": "zone_b", "c": "zone_c",
@@ -39,11 +42,14 @@ HELP = f"""
 Chi can go: <mau> <zone>   -> robot tu gap cube roi tha vao zone, xong ve home
   red c                 gap cube do, tha vao zone C
   yellow a              gap cube vang, tha vao zone A
-  blue b                gap cube xanh, tha vao zone B
+  blue b                gap cube xanh duong, tha vao zone B
+  green a               gap cube xanh la, tha vao zone A
+  purple c              gap cube tim, tha vao zone C
 Cung duoc:  move red c | put the red cube in zone c | do c | vang a | xanh b
+            xanh la a | tim c | g b | p a   (mau: red yellow blue green purple)
 
 Lenh khac:
-  arrange   xep ca 3 cube theo MSSV {STUDENT_ID}:
+  arrange   xep 3 cube (do, vang, xanh duong) theo MSSV {STUDENT_ID}:
             {', '.join(f'{z[-1].upper()}={c.split("_")[0]}' for z, c in ZONE_ASSIGNMENT.items())}
   home      ve vi tri home
   status    xem cube nao dang o dau
@@ -54,6 +60,9 @@ Lenh khac:
 
 def tokenize(line):
     """Tach lenh; 'place(red_cube, zone_b)' cung duoc chap nhan."""
+    line = line.lower()
+    # mau hai tu trong tieng Viet -> gop thanh mot tu
+    line = line.replace("xanh la", "green").replace("xanh duong", "blue")
     return [t for t in re.split(r"[\s(),]+", line.strip()) if t]
 
 

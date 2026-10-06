@@ -28,4 +28,5 @@ ur3_llm_control.egg-info/requires.txt
 ur3_llm_control.egg-info/top_level.txt
 ur3_llm_control.egg-info/zip-safe
 urdf/ur.urdf.xacro
+urdf/gripper/simple_gripper.xacro
 worlds/llm_scene.sdf

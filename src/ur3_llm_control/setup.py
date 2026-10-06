@@ -12,6 +12,7 @@ setup(
         ('share/' + package_name + '/launch', ['launch/llm_robot.launch.py']),
         ('share/' + package_name + '/config', ['config/student_config.yaml', 'config/scene.yaml', 'config/initial_positions.yaml']),
         ('share/' + package_name + '/urdf', ['urdf/ur.urdf.xacro']),
+        ('share/' + package_name + '/urdf/gripper', ['urdf/gripper/simple_gripper.xacro']),
         ('share/' + package_name + '/worlds', ['worlds/llm_scene.sdf']),
     ],
     install_requires=['setuptools'],

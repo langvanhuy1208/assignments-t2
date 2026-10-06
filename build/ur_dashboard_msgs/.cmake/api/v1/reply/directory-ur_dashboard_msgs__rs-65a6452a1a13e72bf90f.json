@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "ur_dashboard_msgs__rs",
+		"source" : "/home/huy/ur3_llm_ws/build/ur_dashboard_msgs/ur_dashboard_msgs__rs"
+	}
+}

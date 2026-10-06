@@ -1,0 +1,28 @@
+running egg_info
+writing ../../build/ur3_llm_control/ur3_llm_control.egg-info/PKG-INFO
+writing dependency_links to ../../build/ur3_llm_control/ur3_llm_control.egg-info/dependency_links.txt
+writing entry points to ../../build/ur3_llm_control/ur3_llm_control.egg-info/entry_points.txt
+writing requirements to ../../build/ur3_llm_control/ur3_llm_control.egg-info/requires.txt
+writing top-level names to ../../build/ur3_llm_control/ur3_llm_control.egg-info/top_level.txt
+reading manifest file '../../build/ur3_llm_control/ur3_llm_control.egg-info/SOURCES.txt'
+writing manifest file '../../build/ur3_llm_control/ur3_llm_control.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+creating /home/huy/ur3_llm_ws/install/ur3_llm_control/share/ur3_llm_control/launch
+copying launch/llm_robot.launch.py -> /home/huy/ur3_llm_ws/install/ur3_llm_control/share/ur3_llm_control/launch
+copying config/student_config.yaml -> /home/huy/ur3_llm_ws/install/ur3_llm_control/share/ur3_llm_control/config
+copying config/scene.yaml -> /home/huy/ur3_llm_ws/install/ur3_llm_control/share/ur3_llm_control/config
+running install_egg_info
+removing '/home/huy/ur3_llm_ws/install/ur3_llm_control/lib/python3.10/site-packages/ur3_llm_control-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/ur3_llm_control/ur3_llm_control.egg-info to /home/huy/ur3_llm_ws/install/ur3_llm_control/lib/python3.10/site-packages/ur3_llm_control-0.0.0-py3.10.egg-info
+running install_scripts
+Installing command_node script to /home/huy/ur3_llm_ws/install/ur3_llm_control/lib/ur3_llm_control
+Installing llm_node script to /home/huy/ur3_llm_ws/install/ur3_llm_control/lib/ur3_llm_control
+Installing move_home script to /home/huy/ur3_llm_ws/install/ur3_llm_control/lib/ur3_llm_control
+Installing move_joint script to /home/huy/ur3_llm_ws/install/ur3_llm_control/lib/ur3_llm_control
+Installing move_to_pose script to /home/huy/ur3_llm_ws/install/ur3_llm_control/lib/ur3_llm_control
+Installing skill_executor script to /home/huy/ur3_llm_ws/install/ur3_llm_control/lib/ur3_llm_control
+writing list of installed files to '/home/huy/ur3_llm_ws/build/ur3_llm_control/install.log'

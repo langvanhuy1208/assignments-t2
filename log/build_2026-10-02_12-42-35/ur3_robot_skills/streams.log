@@ -1,0 +1,70 @@
+[0.012s] Invoking command in '/home/huy/ur3_llm_ws/build/ur3_robot_skills': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/huy/ur3_llm_ws/install/ur3_llm_control:/home/huy/install/turtlebot3_teleop:/home/huy/install/turtlebot3_navigation2:/home/huy/install/turtlebot3_example:/home/huy/install/turtlebot3_manipulation_gazebo:/home/huy/install/turtlebot3_description:/home/huy/install/turtlebot3_cartographer:/home/huy/install/openslam_gmapping:/opt/ros/humble PS1=${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ /usr/bin/cmake /home/huy/ur3_llm_ws/src/ur3_robot_skills -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/huy/ur3_llm_ws/install/ur3_robot_skills
+[0.059s] -- The C compiler identification is GNU 11.4.0
+[0.107s] -- The CXX compiler identification is GNU 11.4.0
+[0.115s] -- Detecting C compiler ABI info
+[0.180s] -- Detecting C compiler ABI info - done
+[0.186s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.186s] -- Detecting C compile features
+[0.187s] -- Detecting C compile features - done
+[0.189s] -- Detecting CXX compiler ABI info
+[0.271s] -- Detecting CXX compiler ABI info - done
+[0.278s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.278s] -- Detecting CXX compile features
+[0.278s] -- Detecting CXX compile features - done
+[0.282s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.433s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.496s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.542s] -- Found rclcpp: 16.0.19 (/opt/ros/humble/share/rclcpp/cmake)
+[0.596s] -- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.603s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.613s] -- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.628s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.647s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.700s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.704s] -- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/share/rmw_cyclonedds_cpp/cmake)
+[0.729s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[0.740s] -- Looking for pthread.h
+[0.805s] -- Looking for pthread.h - found
+[0.805s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.873s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[0.874s] -- Found Threads: TRUE  
+[0.926s] -- Found moveit_ros_planning_interface: 2.5.10 (/opt/ros/humble/share/moveit_ros_planning_interface/cmake)
+[0.962s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: date_time filesystem program_options system thread 
+[1.140s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: chrono date_time filesystem iostreams program_options regex serialization system thread 
+[1.202s] -- Found parameter_traits: 0.7.1 (/opt/ros/humble/share/parameter_traits/cmake)
+[1.226s] -- Found rclcpp_lifecycle: 16.0.19 (/opt/ros/humble/share/rclcpp_lifecycle/cmake)
+[1.360s] -- library: /usr/lib/x86_64-linux-gnu/libcurl.so
+[1.397s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[1.397s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[1.547s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: system filesystem date_time program_options thread chrono 
+[1.579s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: thread system filesystem regex date_time program_options 
+[1.672s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: system filesystem date_time program_options thread 
+[1.758s] -- Configuring done
+[1.790s] -- Generating done
+[1.798s] -- Build files have been written to: /home/huy/ur3_llm_ws/build/ur3_robot_skills
+[1.813s] Invoked command in '/home/huy/ur3_llm_ws/build/ur3_robot_skills' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/huy/ur3_llm_ws/install/ur3_llm_control:/home/huy/install/turtlebot3_teleop:/home/huy/install/turtlebot3_navigation2:/home/huy/install/turtlebot3_example:/home/huy/install/turtlebot3_manipulation_gazebo:/home/huy/install/turtlebot3_description:/home/huy/install/turtlebot3_cartographer:/home/huy/install/openslam_gmapping:/opt/ros/humble PS1=${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ /usr/bin/cmake /home/huy/ur3_llm_ws/src/ur3_robot_skills -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/huy/ur3_llm_ws/install/ur3_robot_skills
+[1.816s] Invoking command in '/home/huy/ur3_llm_ws/build/ur3_robot_skills': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/huy/ur3_llm_ws/install/ur3_llm_control:/home/huy/install/turtlebot3_teleop:/home/huy/install/turtlebot3_navigation2:/home/huy/install/turtlebot3_example:/home/huy/install/turtlebot3_manipulation_gazebo:/home/huy/install/turtlebot3_description:/home/huy/install/turtlebot3_cartographer:/home/huy/install/openslam_gmapping:/opt/ros/humble PS1=${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ /usr/bin/cmake --build /home/huy/ur3_llm_ws/build/ur3_robot_skills -- -j12 -l12
+[1.869s] [ 50%] [32mBuilding CXX object CMakeFiles/home.dir/src/home.cpp.o[0m
+[8.229s] [100%] [32m[1mLinking CXX executable home[0m
+[8.494s] [100%] Built target home
+[8.504s] Invoked command in '/home/huy/ur3_llm_ws/build/ur3_robot_skills' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/huy/ur3_llm_ws/install/ur3_llm_control:/home/huy/install/turtlebot3_teleop:/home/huy/install/turtlebot3_navigation2:/home/huy/install/turtlebot3_example:/home/huy/install/turtlebot3_manipulation_gazebo:/home/huy/install/turtlebot3_description:/home/huy/install/turtlebot3_cartographer:/home/huy/install/openslam_gmapping:/opt/ros/humble PS1=${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ /usr/bin/cmake --build /home/huy/ur3_llm_ws/build/ur3_robot_skills -- -j12 -l12
+[8.513s] Invoking command in '/home/huy/ur3_llm_ws/build/ur3_robot_skills': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/huy/ur3_llm_ws/install/ur3_llm_control:/home/huy/install/turtlebot3_teleop:/home/huy/install/turtlebot3_navigation2:/home/huy/install/turtlebot3_example:/home/huy/install/turtlebot3_manipulation_gazebo:/home/huy/install/turtlebot3_description:/home/huy/install/turtlebot3_cartographer:/home/huy/install/openslam_gmapping:/opt/ros/humble PS1=${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ /usr/bin/cmake --install /home/huy/ur3_llm_ws/build/ur3_robot_skills
+[8.519s] -- Install configuration: ""
+[8.519s] -- Execute custom install script
+[8.519s] -- Symlinking: /home/huy/ur3_llm_ws/install/ur3_robot_skills/lib/ur3_robot_skills/home
+[8.527s] -- Symlinking: /home/huy/ur3_llm_ws/install/ur3_robot_skills/share/ament_index/resource_index/package_run_dependencies/ur3_robot_skills
+[8.534s] -- Symlinking: /home/huy/ur3_llm_ws/install/ur3_robot_skills/share/ament_index/resource_index/parent_prefix_path/ur3_robot_skills
+[8.542s] -- Symlinking: /home/huy/ur3_llm_ws/install/ur3_robot_skills/share/ur3_robot_skills/environment/ament_prefix_path.sh
+[8.551s] -- Symlinking: /home/huy/ur3_llm_ws/install/ur3_robot_skills/share/ur3_robot_skills/environment/ament_prefix_path.dsv
+[8.560s] -- Symlinking: /home/huy/ur3_llm_ws/install/ur3_robot_skills/share/ur3_robot_skills/environment/path.sh
+[8.568s] -- Symlinking: /home/huy/ur3_llm_ws/install/ur3_robot_skills/share/ur3_robot_skills/environment/path.dsv
+[8.578s] -- Symlinking: /home/huy/ur3_llm_ws/install/ur3_robot_skills/share/ur3_robot_skills/local_setup.bash
+[8.587s] -- Symlinking: /home/huy/ur3_llm_ws/install/ur3_robot_skills/share/ur3_robot_skills/local_setup.sh
+[8.595s] -- Symlinking: /home/huy/ur3_llm_ws/install/ur3_robot_skills/share/ur3_robot_skills/local_setup.zsh
+[8.604s] -- Symlinking: /home/huy/ur3_llm_ws/install/ur3_robot_skills/share/ur3_robot_skills/local_setup.dsv
+[8.612s] -- Symlinking: /home/huy/ur3_llm_ws/install/ur3_robot_skills/share/ur3_robot_skills/package.dsv
+[8.620s] -- Symlinking: /home/huy/ur3_llm_ws/install/ur3_robot_skills/share/ament_index/resource_index/packages/ur3_robot_skills
+[8.628s] -- Symlinking: /home/huy/ur3_llm_ws/install/ur3_robot_skills/share/ur3_robot_skills/cmake/ur3_robot_skillsConfig.cmake
+[8.636s] -- Symlinking: /home/huy/ur3_llm_ws/install/ur3_robot_skills/share/ur3_robot_skills/cmake/ur3_robot_skillsConfig-version.cmake
+[8.643s] -- Symlinking: /home/huy/ur3_llm_ws/install/ur3_robot_skills/share/ur3_robot_skills/package.xml
+[8.652s] Invoked command in '/home/huy/ur3_llm_ws/build/ur3_robot_skills' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/huy/ur3_llm_ws/install/ur3_llm_control:/home/huy/install/turtlebot3_teleop:/home/huy/install/turtlebot3_navigation2:/home/huy/install/turtlebot3_example:/home/huy/install/turtlebot3_manipulation_gazebo:/home/huy/install/turtlebot3_description:/home/huy/install/turtlebot3_cartographer:/home/huy/install/openslam_gmapping:/opt/ros/humble PS1=${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ /usr/bin/cmake --install /home/huy/ur3_llm_ws/build/ur3_robot_skills

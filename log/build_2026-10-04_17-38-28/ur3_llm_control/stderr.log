@@ -1,0 +1,5 @@
+  File "/home/huy/ur3_llm_ws/install/ur3_llm_control/lib/python3.10/site-packages/ur3_llm_control/robot_skills.py", line 307
+    f"Robot is not holding
+    ^
+SyntaxError: unterminated string literal (detected at line 307)
+

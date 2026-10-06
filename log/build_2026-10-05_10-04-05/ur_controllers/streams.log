@@ -1,0 +1,138 @@
+[0.015s] Invoking command in '/home/huy/ur3_llm_ws/build/ur_controllers': CMAKE_PREFIX_PATH=/home/huy/ur3_llm_ws/install/ur_dashboard_msgs:/home/huy/ros2_ws/install/ur_simulation_gz:/home/huy/ros2_ws/install/ur_letter_writer:/home/huy/ur3_llm_ws/install/ur:/home/huy/ur3_llm_ws/install/ur_calibration:/home/huy/ur3_llm_ws/install/ur_robot_driver:/home/huy/ur3_llm_ws/install/ur_moveit_config:/home/huy/ur3_llm_ws/install/ur_bringup:/home/huy/ur3_llm_ws/install/ur_controllers:/home/huy/ur3_llm_ws/install/ur3_robot_skills:/home/huy/xecuahuy_ws/install/xecuahuy:/home/huy/xecuahuy_ws/install/slam_gmapping:/home/huy/xecuahuy_ws/install/openslam_gmapping:/home/huy/xecuahuy_ws/install/aws_robomaker_small_warehouse_world:/home/huy/ur3_llm_ws/install/ur3_llm_control:/opt/ros/humble LD_LIBRARY_PATH=/home/huy/ur3_llm_ws/install/ur_dashboard_msgs/lib:/home/huy/ur3_llm_ws/install/ur_robot_driver/lib:/home/huy/ur3_llm_ws/install/ur_controllers/lib:/home/huy/xecuahuy_ws/install/openslam_gmapping/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins PS1=${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ /usr/bin/cmake --build /home/huy/ur3_llm_ws/build/ur_controllers -- -j12 -l12
+[0.085s] [  6%] Built target tool_contact_controller_parameters
+[0.086s] [  8%] Built target gpio_controller_parameters
+[0.087s] [ 13%] Built target force_mode_controller_parameters
+[0.090s] [ 17%] Built target scaled_joint_trajectory_controller_parameters
+[0.090s] [ 22%] Built target friction_model_controller_parameters
+[0.090s] [ 26%] Built target ur_configuration_controller_parameters
+[0.092s] [ 31%] Built target speed_scaling_state_broadcaster_parameters
+[0.095s] [ 35%] Built target freedrive_mode_controller_parameters
+[0.097s] [ 40%] Built target passthrough_trajectory_controller_parameters
+[0.102s] [ 51%] Built target gmock_main
+[0.102s] [ 51%] Built target gmock
+[0.154s] [ 73%] Built target ur_controllers
+[0.189s] [ 77%] Built target test_scaled_joint_trajectory_controller_sampling
+[0.190s] [ 82%] Built target test_load_force_mode_controller
+[0.190s] [ 86%] Built target test_load_scaled_joint_trajectory_controller
+[0.191s] [ 91%] Built target test_tool_contact_controller
+[0.192s] [ 95%] Built target test_load_freedrive_mode_controller
+[0.195s] [100%] Built target test_load_friction_model_controller
+[0.207s] Invoked command in '/home/huy/ur3_llm_ws/build/ur_controllers' returned '0': CMAKE_PREFIX_PATH=/home/huy/ur3_llm_ws/install/ur_dashboard_msgs:/home/huy/ros2_ws/install/ur_simulation_gz:/home/huy/ros2_ws/install/ur_letter_writer:/home/huy/ur3_llm_ws/install/ur:/home/huy/ur3_llm_ws/install/ur_calibration:/home/huy/ur3_llm_ws/install/ur_robot_driver:/home/huy/ur3_llm_ws/install/ur_moveit_config:/home/huy/ur3_llm_ws/install/ur_bringup:/home/huy/ur3_llm_ws/install/ur_controllers:/home/huy/ur3_llm_ws/install/ur3_robot_skills:/home/huy/xecuahuy_ws/install/xecuahuy:/home/huy/xecuahuy_ws/install/slam_gmapping:/home/huy/xecuahuy_ws/install/openslam_gmapping:/home/huy/xecuahuy_ws/install/aws_robomaker_small_warehouse_world:/home/huy/ur3_llm_ws/install/ur3_llm_control:/opt/ros/humble LD_LIBRARY_PATH=/home/huy/ur3_llm_ws/install/ur_dashboard_msgs/lib:/home/huy/ur3_llm_ws/install/ur_robot_driver/lib:/home/huy/ur3_llm_ws/install/ur_controllers/lib:/home/huy/xecuahuy_ws/install/openslam_gmapping/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins PS1=${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ /usr/bin/cmake --build /home/huy/ur3_llm_ws/build/ur_controllers -- -j12 -l12
+[0.210s] Invoking command in '/home/huy/ur3_llm_ws/build/ur_controllers': CMAKE_PREFIX_PATH=/home/huy/ur3_llm_ws/install/ur_dashboard_msgs:/home/huy/ros2_ws/install/ur_simulation_gz:/home/huy/ros2_ws/install/ur_letter_writer:/home/huy/ur3_llm_ws/install/ur:/home/huy/ur3_llm_ws/install/ur_calibration:/home/huy/ur3_llm_ws/install/ur_robot_driver:/home/huy/ur3_llm_ws/install/ur_moveit_config:/home/huy/ur3_llm_ws/install/ur_bringup:/home/huy/ur3_llm_ws/install/ur_controllers:/home/huy/ur3_llm_ws/install/ur3_robot_skills:/home/huy/xecuahuy_ws/install/xecuahuy:/home/huy/xecuahuy_ws/install/slam_gmapping:/home/huy/xecuahuy_ws/install/openslam_gmapping:/home/huy/xecuahuy_ws/install/aws_robomaker_small_warehouse_world:/home/huy/ur3_llm_ws/install/ur3_llm_control:/opt/ros/humble LD_LIBRARY_PATH=/home/huy/ur3_llm_ws/install/ur_dashboard_msgs/lib:/home/huy/ur3_llm_ws/install/ur_robot_driver/lib:/home/huy/ur3_llm_ws/install/ur_controllers/lib:/home/huy/xecuahuy_ws/install/openslam_gmapping/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins PS1=${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ /usr/bin/cmake --install /home/huy/ur3_llm_ws/build/ur_controllers
+[0.217s] -- Install configuration: ""
+[0.217s] -- Execute custom install script
+[0.218s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/force_mode_controller_parameters.hpp
+[0.219s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/freedrive_mode_controller_parameters.hpp
+[0.219s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/friction_model_controller_parameters.hpp
+[0.219s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/gpio_controller_parameters.hpp
+[0.219s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/passthrough_trajectory_controller_parameters.hpp
+[0.219s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/scaled_joint_trajectory_controller_parameters.hpp
+[0.219s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/speed_scaling_state_broadcaster_parameters.hpp
+[0.219s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/tool_contact_controller_parameters.hpp
+[0.219s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/ur_configuration_controller_parameters.hpp
+[0.219s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/force_mode_controller_parameters.hpp
+[0.220s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/freedrive_mode_controller_parameters.hpp
+[0.220s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/friction_model_controller_parameters.hpp
+[0.220s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/gpio_controller_parameters.hpp
+[0.220s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/passthrough_trajectory_controller_parameters.hpp
+[0.220s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/scaled_joint_trajectory_controller_parameters.hpp
+[0.220s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/speed_scaling_state_broadcaster_parameters.hpp
+[0.220s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/tool_contact_controller_parameters.hpp
+[0.220s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/ur_configuration_controller_parameters.hpp
+[0.220s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/force_mode_controller_parameters.hpp
+[0.221s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/freedrive_mode_controller_parameters.hpp
+[0.221s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/friction_model_controller_parameters.hpp
+[0.221s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/gpio_controller_parameters.hpp
+[0.221s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/passthrough_trajectory_controller_parameters.hpp
+[0.221s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/scaled_joint_trajectory_controller_parameters.hpp
+[0.221s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/speed_scaling_state_broadcaster_parameters.hpp
+[0.221s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/tool_contact_controller_parameters.hpp
+[0.221s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/ur_configuration_controller_parameters.hpp
+[0.221s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/force_mode_controller_parameters.hpp
+[0.221s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/freedrive_mode_controller_parameters.hpp
+[0.221s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/friction_model_controller_parameters.hpp
+[0.221s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/gpio_controller_parameters.hpp
+[0.221s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/passthrough_trajectory_controller_parameters.hpp
+[0.221s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/scaled_joint_trajectory_controller_parameters.hpp
+[0.221s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/speed_scaling_state_broadcaster_parameters.hpp
+[0.221s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/tool_contact_controller_parameters.hpp
+[0.222s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/ur_configuration_controller_parameters.hpp
+[0.222s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/force_mode_controller_parameters.hpp
+[0.222s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/freedrive_mode_controller_parameters.hpp
+[0.222s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/friction_model_controller_parameters.hpp
+[0.222s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/gpio_controller_parameters.hpp
+[0.222s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/passthrough_trajectory_controller_parameters.hpp
+[0.222s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/scaled_joint_trajectory_controller_parameters.hpp
+[0.222s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/speed_scaling_state_broadcaster_parameters.hpp
+[0.222s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/tool_contact_controller_parameters.hpp
+[0.222s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/ur_configuration_controller_parameters.hpp
+[0.222s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/force_mode_controller_parameters.hpp
+[0.222s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/freedrive_mode_controller_parameters.hpp
+[0.222s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/friction_model_controller_parameters.hpp
+[0.223s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/gpio_controller_parameters.hpp
+[0.223s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/passthrough_trajectory_controller_parameters.hpp
+[0.223s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/scaled_joint_trajectory_controller_parameters.hpp
+[0.223s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/speed_scaling_state_broadcaster_parameters.hpp
+[0.223s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/tool_contact_controller_parameters.hpp
+[0.223s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/ur_configuration_controller_parameters.hpp
+[0.223s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/force_mode_controller_parameters.hpp
+[0.224s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/freedrive_mode_controller_parameters.hpp
+[0.224s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/friction_model_controller_parameters.hpp
+[0.224s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/gpio_controller_parameters.hpp
+[0.224s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/passthrough_trajectory_controller_parameters.hpp
+[0.224s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/scaled_joint_trajectory_controller_parameters.hpp
+[0.224s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/speed_scaling_state_broadcaster_parameters.hpp
+[0.224s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/tool_contact_controller_parameters.hpp
+[0.224s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/ur_configuration_controller_parameters.hpp
+[0.224s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/force_mode_controller_parameters.hpp
+[0.224s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/freedrive_mode_controller_parameters.hpp
+[0.224s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/friction_model_controller_parameters.hpp
+[0.225s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/gpio_controller_parameters.hpp
+[0.225s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/passthrough_trajectory_controller_parameters.hpp
+[0.225s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/scaled_joint_trajectory_controller_parameters.hpp
+[0.225s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/speed_scaling_state_broadcaster_parameters.hpp
+[0.225s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/tool_contact_controller_parameters.hpp
+[0.225s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/ur_configuration_controller_parameters.hpp
+[0.225s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/force_mode_controller_parameters.hpp
+[0.225s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/freedrive_mode_controller_parameters.hpp
+[0.225s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/friction_model_controller_parameters.hpp
+[0.225s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/gpio_controller_parameters.hpp
+[0.225s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/passthrough_trajectory_controller_parameters.hpp
+[0.225s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/scaled_joint_trajectory_controller_parameters.hpp
+[0.225s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/speed_scaling_state_broadcaster_parameters.hpp
+[0.226s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/tool_contact_controller_parameters.hpp
+[0.226s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/ur_configuration_controller_parameters.hpp
+[0.226s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/share/ur_controllers//controller_plugins.xml
+[0.226s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/lib/libur_controllers.so
+[0.227s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/force_mode_controller.hpp
+[0.227s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/freedrive_mode_controller.hpp
+[0.227s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/friction_model_controller.hpp
+[0.227s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/gpio_controller.hpp
+[0.227s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/passthrough_trajectory_controller.hpp
+[0.227s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/scaled_joint_trajectory_controller.hpp
+[0.227s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/speed_scaling_state_broadcaster.hpp
+[0.227s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/tool_contact_controller.hpp
+[0.227s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/include/ur_controllers/ur_configuration_controller.hpp
+[0.227s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/share/ur_controllers/controller_plugins.xml
+[0.227s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/share/ur_controllers/environment/library_path.sh
+[0.227s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/share/ur_controllers/environment/library_path.dsv
+[0.228s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/share/ament_index/resource_index/package_run_dependencies/ur_controllers
+[0.228s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/share/ament_index/resource_index/parent_prefix_path/ur_controllers
+[0.228s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/share/ur_controllers/environment/ament_prefix_path.sh
+[0.228s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/share/ur_controllers/environment/ament_prefix_path.dsv
+[0.228s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/share/ur_controllers/environment/path.sh
+[0.228s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/share/ur_controllers/environment/path.dsv
+[0.228s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/share/ur_controllers/local_setup.bash
+[0.228s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/share/ur_controllers/local_setup.sh
+[0.228s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/share/ur_controllers/local_setup.zsh
+[0.228s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/share/ur_controllers/local_setup.dsv
+[0.229s] -- Symlinking: /home/huy/ur3_llm_ws/install/ur_controllers/share/ur_controllers/package.dsv
+[0.239s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/share/ament_index/resource_index/packages/ur_controllers
+[0.239s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/share/ament_index/resource_index/controller_interface__pluginlib__plugin/ur_controllers
+[0.239s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/share/ur_controllers/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.239s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/share/ur_controllers/cmake/ament_cmake_export_include_directories-extras.cmake
+[0.239s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/share/ur_controllers/cmake/ament_cmake_export_libraries-extras.cmake
+[0.239s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/share/ur_controllers/cmake/ur_controllersConfig.cmake
+[0.240s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/share/ur_controllers/cmake/ur_controllersConfig-version.cmake
+[0.240s] -- Up-to-date symlink: /home/huy/ur3_llm_ws/install/ur_controllers/share/ur_controllers/package.xml
+[0.243s] Invoked command in '/home/huy/ur3_llm_ws/build/ur_controllers' returned '0': CMAKE_PREFIX_PATH=/home/huy/ur3_llm_ws/install/ur_dashboard_msgs:/home/huy/ros2_ws/install/ur_simulation_gz:/home/huy/ros2_ws/install/ur_letter_writer:/home/huy/ur3_llm_ws/install/ur:/home/huy/ur3_llm_ws/install/ur_calibration:/home/huy/ur3_llm_ws/install/ur_robot_driver:/home/huy/ur3_llm_ws/install/ur_moveit_config:/home/huy/ur3_llm_ws/install/ur_bringup:/home/huy/ur3_llm_ws/install/ur_controllers:/home/huy/ur3_llm_ws/install/ur3_robot_skills:/home/huy/xecuahuy_ws/install/xecuahuy:/home/huy/xecuahuy_ws/install/slam_gmapping:/home/huy/xecuahuy_ws/install/openslam_gmapping:/home/huy/xecuahuy_ws/install/aws_robomaker_small_warehouse_world:/home/huy/ur3_llm_ws/install/ur3_llm_control:/opt/ros/humble LD_LIBRARY_PATH=/home/huy/ur3_llm_ws/install/ur_dashboard_msgs/lib:/home/huy/ur3_llm_ws/install/ur_robot_driver/lib:/home/huy/ur3_llm_ws/install/ur_controllers/lib:/home/huy/xecuahuy_ws/install/openslam_gmapping/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins PS1=${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ /usr/bin/cmake --install /home/huy/ur3_llm_ws/build/ur_controllers

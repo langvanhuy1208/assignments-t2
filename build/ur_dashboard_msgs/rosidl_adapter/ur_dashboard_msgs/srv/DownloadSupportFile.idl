@@ -1,0 +1,22 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from ur_dashboard_msgs/srv/DownloadSupportFile.srv
+// generated code does not contain a copyright notice
+
+
+module ur_dashboard_msgs {
+  module srv {
+    @verbatim (language="comment", text=
+      "Local path where the support file archive (zip) should be stored." "\n"
+      "Only available on PolyScope X >= 10.14.0.")
+    struct DownloadSupportFile_Request {
+      string target_path;
+    };
+    struct DownloadSupportFile_Response {
+      string answer;
+
+      boolean success;
+
+      boolean support_files_present;
+    };
+  };
+};

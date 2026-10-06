@@ -1,0 +1,22 @@
+table:
+  position: [0.0, 0.0, 0.55]
+
+objects:
+  red_cube:
+    position: [-0.45, -0.05, 0.60]
+
+  yellow_cube:
+    position: [0.0, -0.05, 0.60]
+
+  blue_cube:
+    position: [0.45, -0.05, 0.60]
+
+zones:
+  zone_a:
+    position: [-0.45, 0.30, 0.56]
+
+  zone_b:
+    position: [0.0, 0.30, 0.56]
+
+  zone_c:
+    position: [0.45, 0.30, 0.56]

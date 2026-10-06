@@ -1,0 +1,10 @@
+student_name: "Lang Van Huy"
+student_id: "23020745"
+
+last_two_digits: 45
+P: 3
+
+zone_mapping:
+  zone_a: yellow_cube
+  zone_b: blue_cube
+  zone_c: red_cube

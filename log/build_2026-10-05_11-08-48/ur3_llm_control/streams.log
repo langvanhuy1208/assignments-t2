@@ -1,0 +1,39 @@
+[0.760s] Invoking command in '/home/huy/ur3_llm_ws/build/ur3_llm_control': PS1=${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/huy/ur3_llm_ws/build/ur3_llm_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/huy/ur3_llm_ws/install/ur3_llm_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/huy/ur3_llm_ws/build/ur3_llm_control/build --no-deps symlink_data
+[1.044s] running develop
+[1.230s] running egg_info
+[1.230s] creating ur3_llm_control.egg-info
+[1.230s] writing ur3_llm_control.egg-info/PKG-INFO
+[1.231s] writing dependency_links to ur3_llm_control.egg-info/dependency_links.txt
+[1.231s] writing entry points to ur3_llm_control.egg-info/entry_points.txt
+[1.231s] writing requirements to ur3_llm_control.egg-info/requires.txt
+[1.231s] writing top-level names to ur3_llm_control.egg-info/top_level.txt
+[1.231s] writing manifest file 'ur3_llm_control.egg-info/SOURCES.txt'
+[1.233s] reading manifest file 'ur3_llm_control.egg-info/SOURCES.txt'
+[1.234s] writing manifest file 'ur3_llm_control.egg-info/SOURCES.txt'
+[1.236s] running build_ext
+[1.236s] Creating /home/huy/ur3_llm_ws/install/ur3_llm_control/lib/python3.10/site-packages/ur3-llm-control.egg-link (link to .)
+[1.237s] Installing command_node script to /home/huy/ur3_llm_ws/install/ur3_llm_control/lib/ur3_llm_control
+[1.237s] Installing llm_node script to /home/huy/ur3_llm_ws/install/ur3_llm_control/lib/ur3_llm_control
+[1.237s] Installing move_home script to /home/huy/ur3_llm_ws/install/ur3_llm_control/lib/ur3_llm_control
+[1.238s] Installing move_joint script to /home/huy/ur3_llm_ws/install/ur3_llm_control/lib/ur3_llm_control
+[1.238s] Installing move_to_pose script to /home/huy/ur3_llm_ws/install/ur3_llm_control/lib/ur3_llm_control
+[1.238s] Installing skill_executor script to /home/huy/ur3_llm_ws/install/ur3_llm_control/lib/ur3_llm_control
+[1.238s] 
+[1.238s] Installed /home/huy/ur3_llm_ws/build/ur3_llm_control
+[1.238s] running symlink_data
+[1.238s] creating /home/huy/ur3_llm_ws/install/ur3_llm_control/share/ament_index
+[1.238s] creating /home/huy/ur3_llm_ws/install/ur3_llm_control/share/ament_index/resource_index
+[1.238s] creating /home/huy/ur3_llm_ws/install/ur3_llm_control/share/ament_index/resource_index/packages
+[1.238s] symbolically linking /home/huy/ur3_llm_ws/build/ur3_llm_control/resource/ur3_llm_control -> /home/huy/ur3_llm_ws/install/ur3_llm_control/share/ament_index/resource_index/packages
+[1.238s] symbolically linking /home/huy/ur3_llm_ws/build/ur3_llm_control/package.xml -> /home/huy/ur3_llm_ws/install/ur3_llm_control/share/ur3_llm_control
+[1.238s] creating /home/huy/ur3_llm_ws/install/ur3_llm_control/share/ur3_llm_control/launch
+[1.238s] symbolically linking /home/huy/ur3_llm_ws/build/ur3_llm_control/launch/llm_robot.launch.py -> /home/huy/ur3_llm_ws/install/ur3_llm_control/share/ur3_llm_control/launch
+[1.239s] creating /home/huy/ur3_llm_ws/install/ur3_llm_control/share/ur3_llm_control/config
+[1.239s] symbolically linking /home/huy/ur3_llm_ws/build/ur3_llm_control/config/student_config.yaml -> /home/huy/ur3_llm_ws/install/ur3_llm_control/share/ur3_llm_control/config
+[1.239s] symbolically linking /home/huy/ur3_llm_ws/build/ur3_llm_control/config/scene.yaml -> /home/huy/ur3_llm_ws/install/ur3_llm_control/share/ur3_llm_control/config
+[1.239s] symbolically linking /home/huy/ur3_llm_ws/build/ur3_llm_control/config/initial_positions.yaml -> /home/huy/ur3_llm_ws/install/ur3_llm_control/share/ur3_llm_control/config
+[1.239s] creating /home/huy/ur3_llm_ws/install/ur3_llm_control/share/ur3_llm_control/urdf
+[1.239s] symbolically linking /home/huy/ur3_llm_ws/build/ur3_llm_control/urdf/ur.urdf.xacro -> /home/huy/ur3_llm_ws/install/ur3_llm_control/share/ur3_llm_control/urdf
+[1.239s] creating /home/huy/ur3_llm_ws/install/ur3_llm_control/share/ur3_llm_control/worlds
+[1.239s] symbolically linking /home/huy/ur3_llm_ws/build/ur3_llm_control/worlds/llm_scene.sdf -> /home/huy/ur3_llm_ws/install/ur3_llm_control/share/ur3_llm_control/worlds
+[1.275s] Invoked command in '/home/huy/ur3_llm_ws/build/ur3_llm_control' returned '0': PS1=${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/huy/ur3_llm_ws/build/ur3_llm_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/huy/ur3_llm_ws/install/ur3_llm_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/huy/ur3_llm_ws/build/ur3_llm_control/build --no-deps symlink_data

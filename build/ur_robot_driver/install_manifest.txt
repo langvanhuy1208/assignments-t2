@@ -1,0 +1,6 @@
+/home/huy/ur3_llm_ws/install/ur_robot_driver/lib/librobot_state_helper_lib.so
+/home/huy/ur3_llm_ws/install/ur_robot_driver/share/ur_robot_driver/resources/rs485-1.0.urcap
+/home/huy/ur3_llm_ws/install/ur_robot_driver/share/ur_robot_driver/resources/ros_control.urscript
+/home/huy/ur3_llm_ws/install/ur_robot_driver/share/ur_robot_driver/resources/rtde_input_recipe.txt
+/home/huy/ur3_llm_ws/install/ur_robot_driver/share/ur_robot_driver/resources/rtde_output_recipe.txt
+/home/huy/ur3_llm_ws/install/ur_robot_driver/share/ur_robot_driver/resources/externalcontrol-1.0.5.urcap

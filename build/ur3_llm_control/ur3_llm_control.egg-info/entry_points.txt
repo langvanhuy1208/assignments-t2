@@ -1,0 +1,9 @@
+[console_scripts]
+command_node = ur3_llm_control.command_node:main
+llm_node = ur3_llm_control.llm_node:main
+move_home = ur3_llm_control.move_home:main
+move_joint = ur3_llm_control.move_joint:main
+move_to_pose = ur3_llm_control.move_to_pose:main
+skill_executor = ur3_llm_control.skill_executor:main
+ur3_cli = ur3_llm_control.cli_node:main
+

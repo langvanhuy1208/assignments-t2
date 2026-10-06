@@ -1,0 +1,16 @@
+/home/huy/ur3_llm_ws/install/ur3_robot_skills/lib/ur3_robot_skills/home
+/home/huy/ur3_llm_ws/install/ur3_robot_skills/share/ament_index/resource_index/package_run_dependencies/ur3_robot_skills
+/home/huy/ur3_llm_ws/install/ur3_robot_skills/share/ament_index/resource_index/parent_prefix_path/ur3_robot_skills
+/home/huy/ur3_llm_ws/install/ur3_robot_skills/share/ur3_robot_skills/environment/ament_prefix_path.sh
+/home/huy/ur3_llm_ws/install/ur3_robot_skills/share/ur3_robot_skills/environment/ament_prefix_path.dsv
+/home/huy/ur3_llm_ws/install/ur3_robot_skills/share/ur3_robot_skills/environment/path.sh
+/home/huy/ur3_llm_ws/install/ur3_robot_skills/share/ur3_robot_skills/environment/path.dsv
+/home/huy/ur3_llm_ws/install/ur3_robot_skills/share/ur3_robot_skills/local_setup.bash
+/home/huy/ur3_llm_ws/install/ur3_robot_skills/share/ur3_robot_skills/local_setup.sh
+/home/huy/ur3_llm_ws/install/ur3_robot_skills/share/ur3_robot_skills/local_setup.zsh
+/home/huy/ur3_llm_ws/install/ur3_robot_skills/share/ur3_robot_skills/local_setup.dsv
+/home/huy/ur3_llm_ws/install/ur3_robot_skills/share/ur3_robot_skills/package.dsv
+/home/huy/ur3_llm_ws/install/ur3_robot_skills/share/ament_index/resource_index/packages/ur3_robot_skills
+/home/huy/ur3_llm_ws/install/ur3_robot_skills/share/ur3_robot_skills/cmake/ur3_robot_skillsConfig.cmake
+/home/huy/ur3_llm_ws/install/ur3_robot_skills/share/ur3_robot_skills/cmake/ur3_robot_skillsConfig-version.cmake
+/home/huy/ur3_llm_ws/install/ur3_robot_skills/share/ur3_robot_skills/package.xml

@@ -1,0 +1,37 @@
+[0.708s] Invoking command in '/home/huy/ur3_llm_ws/src/ur3_llm_control': PS1=${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/huy/ur3_llm_ws/build/ur3_llm_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/huy/ur3_llm_ws/install/ur3_llm_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/ur3_llm_control build --build-base /home/huy/ur3_llm_ws/build/ur3_llm_control/build install --record /home/huy/ur3_llm_ws/build/ur3_llm_control/install.log --single-version-externally-managed install_data
+[0.943s] running egg_info
+[0.944s] writing ../../build/ur3_llm_control/ur3_llm_control.egg-info/PKG-INFO
+[0.944s] writing dependency_links to ../../build/ur3_llm_control/ur3_llm_control.egg-info/dependency_links.txt
+[0.945s] writing entry points to ../../build/ur3_llm_control/ur3_llm_control.egg-info/entry_points.txt
+[0.945s] writing requirements to ../../build/ur3_llm_control/ur3_llm_control.egg-info/requires.txt
+[0.945s] writing top-level names to ../../build/ur3_llm_control/ur3_llm_control.egg-info/top_level.txt
+[0.948s] reading manifest file '../../build/ur3_llm_control/ur3_llm_control.egg-info/SOURCES.txt'
+[0.949s] writing manifest file '../../build/ur3_llm_control/ur3_llm_control.egg-info/SOURCES.txt'
+[0.949s] running build
+[0.949s] running build_py
+[0.949s] copying ur3_llm_control/robot_skills.py -> /home/huy/ur3_llm_ws/build/ur3_llm_control/build/lib/ur3_llm_control
+[0.949s] copying ur3_llm_control/command_node.py -> /home/huy/ur3_llm_ws/build/ur3_llm_control/build/lib/ur3_llm_control
+[0.950s] running install
+[0.950s] running install_lib
+[0.951s] copying /home/huy/ur3_llm_ws/build/ur3_llm_control/build/lib/ur3_llm_control/robot_skills.py -> /home/huy/ur3_llm_ws/install/ur3_llm_control/lib/python3.10/site-packages/ur3_llm_control
+[0.951s] copying /home/huy/ur3_llm_ws/build/ur3_llm_control/build/lib/ur3_llm_control/command_node.py -> /home/huy/ur3_llm_ws/install/ur3_llm_control/lib/python3.10/site-packages/ur3_llm_control
+[0.952s] byte-compiling /home/huy/ur3_llm_ws/install/ur3_llm_control/lib/python3.10/site-packages/ur3_llm_control/robot_skills.py to robot_skills.cpython-310.pyc
+[0.952s]   File "/home/huy/ur3_llm_ws/install/ur3_llm_control/lib/python3.10/site-packages/ur3_llm_control/robot_skills.py", line 307
+[0.952s]     f"Robot is not holding
+[0.952s]     ^
+[0.952s] SyntaxError: unterminated string literal (detected at line 307)
+[0.952s] 
+[0.952s] byte-compiling /home/huy/ur3_llm_ws/install/ur3_llm_control/lib/python3.10/site-packages/ur3_llm_control/command_node.py to command_node.cpython-310.pyc
+[0.954s] running install_data
+[0.954s] running install_egg_info
+[0.956s] removing '/home/huy/ur3_llm_ws/install/ur3_llm_control/lib/python3.10/site-packages/ur3_llm_control-0.0.0-py3.10.egg-info' (and everything under it)
+[0.956s] Copying ../../build/ur3_llm_control/ur3_llm_control.egg-info to /home/huy/ur3_llm_ws/install/ur3_llm_control/lib/python3.10/site-packages/ur3_llm_control-0.0.0-py3.10.egg-info
+[0.957s] running install_scripts
+[0.975s] Installing check_moveit script to /home/huy/ur3_llm_ws/install/ur3_llm_control/lib/ur3_llm_control
+[0.976s] Installing command_node script to /home/huy/ur3_llm_ws/install/ur3_llm_control/lib/ur3_llm_control
+[0.976s] Installing llm_node script to /home/huy/ur3_llm_ws/install/ur3_llm_control/lib/ur3_llm_control
+[0.976s] Installing move_home script to /home/huy/ur3_llm_ws/install/ur3_llm_control/lib/ur3_llm_control
+[0.976s] Installing move_joint script to /home/huy/ur3_llm_ws/install/ur3_llm_control/lib/ur3_llm_control
+[0.976s] Installing move_to_pose script to /home/huy/ur3_llm_ws/install/ur3_llm_control/lib/ur3_llm_control
+[0.976s] writing list of installed files to '/home/huy/ur3_llm_ws/build/ur3_llm_control/install.log'
+[1.006s] Invoked command in '/home/huy/ur3_llm_ws/src/ur3_llm_control' returned '0': PS1=${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/huy/ur3_llm_ws/build/ur3_llm_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/huy/ur3_llm_ws/install/ur3_llm_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/ur3_llm_control build --build-base /home/huy/ur3_llm_ws/build/ur3_llm_control/build install --record /home/huy/ur3_llm_ws/build/ur3_llm_control/install.log --single-version-externally-managed install_data

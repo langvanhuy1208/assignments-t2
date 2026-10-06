@@ -1,0 +1,3 @@
+string message
+# Optional popup title. Used on PolyScope X; ignored on PolyScope 5 / CB3.
+string title

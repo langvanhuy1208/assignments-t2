@@ -1,0 +1,15 @@
+/home/huy/ur3_llm_ws/install/ur/share/ament_index/resource_index/package_run_dependencies/ur
+/home/huy/ur3_llm_ws/install/ur/share/ament_index/resource_index/parent_prefix_path/ur
+/home/huy/ur3_llm_ws/install/ur/share/ur/environment/ament_prefix_path.sh
+/home/huy/ur3_llm_ws/install/ur/share/ur/environment/ament_prefix_path.dsv
+/home/huy/ur3_llm_ws/install/ur/share/ur/environment/path.sh
+/home/huy/ur3_llm_ws/install/ur/share/ur/environment/path.dsv
+/home/huy/ur3_llm_ws/install/ur/share/ur/local_setup.bash
+/home/huy/ur3_llm_ws/install/ur/share/ur/local_setup.sh
+/home/huy/ur3_llm_ws/install/ur/share/ur/local_setup.zsh
+/home/huy/ur3_llm_ws/install/ur/share/ur/local_setup.dsv
+/home/huy/ur3_llm_ws/install/ur/share/ur/package.dsv
+/home/huy/ur3_llm_ws/install/ur/share/ament_index/resource_index/packages/ur
+/home/huy/ur3_llm_ws/install/ur/share/ur/cmake/urConfig.cmake
+/home/huy/ur3_llm_ws/install/ur/share/ur/cmake/urConfig-version.cmake
+/home/huy/ur3_llm_ws/install/ur/share/ur/package.xml

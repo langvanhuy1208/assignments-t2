@@ -1,0 +1,18 @@
+[0.719s] Invoking command in '/home/huy/ur3_llm_ws/build/ur3_llm_control': PS1=${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/huy/ur3_llm_ws/build/ur3_llm_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/huy/ur3_llm_ws/install/ur3_llm_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/huy/ur3_llm_ws/build/ur3_llm_control/build --no-deps symlink_data
+[0.938s] running develop
+[1.084s] running egg_info
+[1.084s] writing ur3_llm_control.egg-info/PKG-INFO
+[1.084s] writing dependency_links to ur3_llm_control.egg-info/dependency_links.txt
+[1.084s] writing entry points to ur3_llm_control.egg-info/entry_points.txt
+[1.084s] writing requirements to ur3_llm_control.egg-info/requires.txt
+[1.084s] writing top-level names to ur3_llm_control.egg-info/top_level.txt
+[1.086s] reading manifest file 'ur3_llm_control.egg-info/SOURCES.txt'
+[1.090s] writing manifest file 'ur3_llm_control.egg-info/SOURCES.txt'
+[1.091s] running build_ext
+[1.091s] Creating /home/huy/ur3_llm_ws/install/ur3_llm_control/lib/python3.10/site-packages/ur3-llm-control.egg-link (link to .)
+[1.092s] Installing check_moveit script to /home/huy/ur3_llm_ws/install/ur3_llm_control/lib/ur3_llm_control
+[1.092s] Installing move_home script to /home/huy/ur3_llm_ws/install/ur3_llm_control/lib/ur3_llm_control
+[1.092s] 
+[1.092s] Installed /home/huy/ur3_llm_ws/build/ur3_llm_control
+[1.092s] running symlink_data
+[1.124s] Invoked command in '/home/huy/ur3_llm_ws/build/ur3_llm_control' returned '0': PS1=${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/huy/ur3_llm_ws/build/ur3_llm_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/huy/ur3_llm_ws/install/ur3_llm_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/huy/ur3_llm_ws/build/ur3_llm_control/build --no-deps symlink_data

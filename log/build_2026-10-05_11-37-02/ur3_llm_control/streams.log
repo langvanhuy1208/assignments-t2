@@ -1,0 +1,22 @@
+[0.736s] Invoking command in '/home/huy/ur3_llm_ws/build/ur3_llm_control': PS1=${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/huy/ur3_llm_ws/build/ur3_llm_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/huy/ur3_llm_ws/install/ur3_llm_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/huy/ur3_llm_ws/build/ur3_llm_control/build --no-deps symlink_data
+[1.017s] running develop
+[1.239s] running egg_info
+[1.239s] writing ur3_llm_control.egg-info/PKG-INFO
+[1.239s] writing dependency_links to ur3_llm_control.egg-info/dependency_links.txt
+[1.240s] writing entry points to ur3_llm_control.egg-info/entry_points.txt
+[1.240s] writing requirements to ur3_llm_control.egg-info/requires.txt
+[1.240s] writing top-level names to ur3_llm_control.egg-info/top_level.txt
+[1.243s] reading manifest file 'ur3_llm_control.egg-info/SOURCES.txt'
+[1.245s] writing manifest file 'ur3_llm_control.egg-info/SOURCES.txt'
+[1.247s] running build_ext
+[1.247s] Creating /home/huy/ur3_llm_ws/install/ur3_llm_control/lib/python3.10/site-packages/ur3-llm-control.egg-link (link to .)
+[1.249s] Installing command_node script to /home/huy/ur3_llm_ws/install/ur3_llm_control/lib/ur3_llm_control
+[1.249s] Installing llm_node script to /home/huy/ur3_llm_ws/install/ur3_llm_control/lib/ur3_llm_control
+[1.250s] Installing move_home script to /home/huy/ur3_llm_ws/install/ur3_llm_control/lib/ur3_llm_control
+[1.250s] Installing move_joint script to /home/huy/ur3_llm_ws/install/ur3_llm_control/lib/ur3_llm_control
+[1.250s] Installing move_to_pose script to /home/huy/ur3_llm_ws/install/ur3_llm_control/lib/ur3_llm_control
+[1.250s] Installing skill_executor script to /home/huy/ur3_llm_ws/install/ur3_llm_control/lib/ur3_llm_control
+[1.250s] 
+[1.250s] Installed /home/huy/ur3_llm_ws/build/ur3_llm_control
+[1.250s] running symlink_data
+[1.290s] Invoked command in '/home/huy/ur3_llm_ws/build/ur3_llm_control' returned '0': PS1=${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/huy/ur3_llm_ws/build/ur3_llm_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/huy/ur3_llm_ws/install/ur3_llm_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/huy/ur3_llm_ws/build/ur3_llm_control/build --no-deps symlink_data

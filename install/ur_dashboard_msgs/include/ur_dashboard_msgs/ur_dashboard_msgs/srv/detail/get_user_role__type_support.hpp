@@ -1,0 +1,1 @@
+/home/huy/ur3_llm_ws/build/ur_dashboard_msgs/rosidl_generator_cpp/ur_dashboard_msgs/srv/detail/get_user_role__type_support.hpp

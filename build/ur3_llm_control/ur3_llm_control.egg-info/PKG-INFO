@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: ur3-llm-control
+Version: 0.0.0
+Summary: UR3 skill-based planning with LLM and MoveIt 2
+Home-page: UNKNOWN
+Maintainer: Lang Van Huy
+Maintainer-email: student@example.com
+License: Apache-2.0
+Platform: UNKNOWN
+Provides-Extra: test
+
+UNKNOWN
+
